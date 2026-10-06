@@ -1,0 +1,35 @@
+/* CSS styles for PowerCraft08 */
+
+/*  CSS for PowerCraft08
+    Author: Stephen John Cortez
+    Section: WD - 202
+*/
+
+/* CSS reset */
+body, header, nav, main, footer, h1, h2, h3, p, div, img, ul, li, section, article, button, figure, figcaption{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* removes decoration to all links */
+a{
+    text-decoration: none;
+}
+
+/* Styling rule for box sizing applies to all elements */
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* =================================================================== */
+/* STYLE RULES FOR MOBILE VIEWPORT */
+
+/* BODY */
+body{
+    background-color: #101A29;
+    color: #94A3B8;
+    font-family: "Roboto", sans-serif;
+}
