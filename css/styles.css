@@ -1278,7 +1278,7 @@ footer ul{
 
     nav, #menu-btn, #logo, .btn, .btn2, .filter-buttons, video, .grid, .view-more,
     .social, .footer-links, .quote, .featured-img, .hero-buttons, .story-logo img, .tagline, .mobile{
-        display: none !important;
+        display: none;
     }
 
     header{
