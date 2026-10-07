@@ -33,3 +33,540 @@ body{
     color: #94A3B8;
     font-family: "Roboto", sans-serif;
 }
+
+#container{
+    max-widthL 1920px;
+    margin: 0 auto;
+}
+
+/* IMAGES */
+img{
+    width: 100%;
+    display: block;
+}
+
+span{
+    color: #62B8FF;
+}
+
+/* SHARED STYLES: all the Bebas Neue texts and all the white texts */
+.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .card-text a, .btn, .btn2, .filter-btn,
+.story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .btn, .btn2, .filter-btn,
+.story-logo figcaption, th, #form label, .footer-brand{
+    color: #fff;
+}
+
+/* NAVIGATION */
+#top-bar{
+    position: sticky;
+    top: 0;
+    background-color: rgb(6, 8, 12, 0.45);
+    -webkit-backdrop-filter: blur(10px);
+    backgrop-filter: blut(10px);
+    border-bottom: 3px solid #62B8FF;
+}
+
+/* HEADER/LOGO */
+header{
+    display: fles;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+.logo-link{
+    display: flex;
+    align-items: center;
+    grid-gap: 8px;
+    front-size: 1.4em;
+}
+
+
+#logo{
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid #62B8FF;
+    border-radius: 50%;
+}
+
+/* Hamburger button */
+#menu-btn{
+    background: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+#menu-btn span{
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #62B8FF;
+}
+
+/* NAVIGATION LINKS (hidden in mobile, the hamburger button shows them) */
+nav{
+    display: none;
+}
+
+nav.open{
+    display: block;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li a{
+    display: block;
+    padding: 0.6em 1em;
+    font-size: 1.2em;
+    transition: color 0.2s;
+}
+
+nav li a:hover,
+nav li a.current{
+    color: #62B8FF;
+}
+
+/* MAIN */
+main{
+    padding: 28px 4% 60px;
+}
+
+main.no-padding{
+    padding: 0;
+}
+
+/* Show mobile class, hide tablet-desktop class */
+.mobile{
+    display: block;
+}
+
+.tablet-desktop{
+    display: none;
+}
+
+/* TITLE/DESCRIPTION */
+.intro{
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.small-title,
+.small-title-mobile{
+    color: #62B8FF;
+    font-weight: 650;
+}
+
+.small-title{
+    font-size: 1.25em;
+}
+
+.small-title-mobile{
+    font-size: 13px;
+}
+
+h1{
+    font-size: 3.5em;
+    margin-bottom: 16px;
+}
+
+.tagline{
+    margin-bottom: 29px;
+}
+
+.intro-text{
+    max-width: 800px;
+    line-height: 1.5;
+    margin: 10px auto 18px;
+}
+
+.intro-text.wide{
+    max-width: 1000px;
+}
+
+/* Filter buttons (videos and projects) */
+.filter-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 12px;
+    margin-top: 30px;
+}
+
+/* in mobile the buttons in the projects page fill the row */
+.project-buttons .filter-btn{
+    flex: 1;
+}
+
+/* HEADINGS AND TEXT */
+.heading{
+    font-size: 3.7em;
+    margin: 0 0 25px;
+}
+
+.heading.small{
+    font-size: 1.7em;
+    color: #62B8FF;
+    margin-bottom: 20px;
+}
+
+.sub-heading,
+.idea-box h3{
+    font-size: 2.4em;
+}
+
+.sub-heading{
+    margin-bottom: 10px;
+}
+
+.text p{
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.subtitle{
+    margin: -15px 0 24px;
+}
+
+.center{
+    text-align: center;
+}
+
+/* BUTTONS (all the buttons in all the pages have the same size) */
+.btn,
+.btn2,
+.filter-btn{
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 14px 16px 11px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: #2563EB;
+    border: 1px solid #fff;
+}
+
+.btn2,
+.filter-btn{
+    background: transparent;
+    border: 1px solid #62B8FF;
+}
+
+.btn:hover,
+.btn2:hover,
+.filter-btn:hover,
+.filter-btn.active{
+    background-color: #62B8FF;
+    color: #06080C;
+}
+
+/* HOME PAGE: hero (in mobile only the title is on top of the image) */
+.hero-title{
+    background: url("../img/hero.jpg") center / cover;
+    padding: 30px 4% 28px;
+}
+
+#hero h1{
+    font-size: 2.3em;
+    margin-bottom: 0;
+}
+
+#hero .intro-text{
+    max-width: none;
+    margin: 20px 0;
+    padding: 0 4%;
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: #d4deec;
+}
+
+.hero-buttons{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    padding: 14px 4% 34px;
+}
+
+/* HOME PAGE: sections */
+.section{
+    padding: 70px 4%;
+}
+
+.section.dark{
+    background-color: rgba(6, 8, 12, 0.45);
+}
+
+.two-columns{
+    display: grid;
+    grid-gap: 30px;
+    align-items: center;
+}
+
+.idea-box{
+    background-color: #192B3E;
+    border: 1px solid #62B8FF;
+    border-radius: 8px;
+    padding: 28px;
+}
+
+.idea-box h3,
+.idea-box p{
+    margin-bottom: 20px;
+}
+
+.featured-img{
+    border: 1px solid #62B8FF;
+    border-radius: 6px;
+}
+
+.view-more{
+    text-align: center;
+    margin-top: 36px;
+}
+
+/* VIDEO CARDS (videos, projects and home) */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 28px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.card{
+    background-color: #192B3E;
+    border: 1px solid #62B8FF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img{
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-text{
+    padding: 25px 21px 32px;
+}
+
+.category{
+    color: #62B8FF;
+    font-size: 0.75em;
+    margin-bottom: 6px;
+}
+
+.card h2{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-text .description{
+    line-height: 1.35;
+    margin-bottom: 26px;
+}
+
+.card-text a{
+    color: #62B8FF;
+    font-size: 1.15em;
+}
+
+.card-text a:hover{
+    color: #fff;
+}
+
+/* PROJECTS PAGE */
+.project-section{
+    margin-top: 70px;
+    scroll-margin-top: 110px;
+}
+
+/* ABOUT PAGE: story (the logo and button are hidden in mobile) */
+.story-logo{
+    display: none;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.story-logo img{
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border: 1px solid #62B8FF;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.story-logo figcaption{
+    font-size: 2.4em;
+}
+
+.story-box .btn{
+    display: none;
+}
+
+/* ABOUT PAGE: content breakdown (list in mobile, table in tablet and desktop) */
+.table-box{
+    text-align: left;
+}
+
+.list-item{
+    margin-bottom: 18px;
+}
+
+.list-item p{
+    font-size: 0.85em;
+    margin-bottom: 2px;
+}
+
+.list-item span{
+    color: #fff;
+}
+
+/* CONTACT PAGE: form */
+#form{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#form fieldset{
+    background-color: #192B3E;
+    border: 1px solid #62B8FF;
+    border-radius: 8px;
+    padding: 6px 24px 24px;
+    margin: 0 0 32px;
+}
+
+#form legend{
+    color: #62B8FF;
+    font-size: 1.3em;
+    padding: 0 8px;
+}
+
+#form label{
+    display: block;
+    font-size: 0.95em;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+#form input,
+#form textarea{
+    width: 100%;
+    background-color: #101A29;
+    border: 1px solid #62B8FF;
+    border-radius: 8px;
+    color: #94A3B8;
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 14px 16px;
+}
+
+#form textarea{
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-buttons{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12px;
+    margin-top: 24px;
+}
+
+/* CONTACT PAGE: contact info */
+#contact-info{
+    max-width: 560px;
+    margin: 60px auto 0;
+    text-align: center;
+}
+
+#contact-info .heading{
+    font-size: 3em;
+    margin-bottom: 24px;
+}
+
+#contact-info ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-info li{
+    margin-bottom: 28px;
+}
+
+#contact-info li a{
+    display: block;
+    font-size: 1.6em;
+}
+
+#contact-info li.call{
+    order: -1;
+    background-color: #192B3E;
+    border: 1px solid #62B8FF;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer{
+    background-color: #06080C;
+    border-top: 3px solid #62B8FF;
+    padding: 35px 4%;
+    text-align: center;
+}
+
+.footer-brand{
+    font-size: 1.3em;
+}
+
+.quote{
+    font-size: 0.9em;
+    margin: 16px 0 20px;
+}
+
+footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links li a{
+    text-transform: uppercase;
+    color: #94A3B8;
+    font-size: 0.9em;
+    padding: 0 12px;
+}
+
+.footer-links li a:hover{
+    color: #62B8FF;
+}
+
+.social{
+    grid-gap: 22px;
+    margin: 22px 0;
+}
+
+.social img{
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.copy{
+    font-size: 0.85em;
+}
+
