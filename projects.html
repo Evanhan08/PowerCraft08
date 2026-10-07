@@ -6,7 +6,7 @@
         Section: WD-202
         Activity: PowerCraft08 Website
   -->
-  <title>Home | PowerCraft08</title>
+  <title>Projects | PowerCraft08</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
@@ -24,8 +24,137 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-chrome-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
 </head>
+
 <body>
-    
+  <div id="container">
+    <div id="top-bar">
+      <header>
+        <!-- LOGO -->
+        <a href="index.html" class="logo-link">
+          <img src="img/logo1.jpg" alt="PowerCraft08 logo" id="logo" />
+          <p class="logo-name">POWERCRAFT<span>08</span></p>
+        </a>
+
+      <!-- HAMBURGER MENU BUTTON -->
+      <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </header>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="projects.html" class="current" aria-current="page">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <!-- TITLE/DESCRIPTION -->
+      <section class="intro">
+        <p class="small-title">MY WORK</p>
+        <h1>Projects</h1>
+        <p class="intro-text">Explore the different projects created through PowerCraft08. Completed builds are shown in Showcase, while Tutorials focus on helping viewers create their own projects.</p>
+        
+        <div class="filter-buttons project-buttons">
+          <a href="#showcase" class="filter-btn">Showcase</a>
+          <a href="#tutorial" class="filter-btn">Tutorial</a>
+        </div>
+      </section>
+
+      <!-- SHOWCASE -->
+      <section id="showcase" class="project-section">
+        <h2 class="heading">Showcase</h2>
+        <p class="subtitle tablet-desktop">Completed builds and creative projects made by PowerCraft08.</p>
+        
+        <!-- VIDEO CARDS -->
+        <div class="grid">
+          <article class="card">
+            <figure>
+              <img src="img/PlaneCrazy_Ford.png" alt="Ford Ranger in Plane Crazy" />
+              <figcaption class="card-text">
+                <p class="category">Plane Crazy</p>
+                <h2>Ford Ranger Showcase</h2>
+                <p>A Ford Ranger showcased by PowerCraft08</p>
+                <a href="https://www.youtube.com/" target="_blank">Watch videos &rarr;</a>
+              </figcaption>
+            </figure>
+          </article>
+          
+          <article class="card">
+            <figure>
+              <img src="img/Mechanica_Police.png" alt="Police car in Mechanica" />
+              <figcaption class="card-text">
+                <p class="category">Mechanica</p>
+                <h2>Police Car Showcase</h2>
+                <p>A police car built and showcased by PowerCraft08</p>
+                <a href="https://youtu.be/-fN7Lc4sS6I" target="_blank">Watch videos &rarr;</a>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="img/GinuisKiller2_random.png" alt="Genius Killer 2 builds" />
+              <figcaption class="card-text">
+                <p class="category">Genius Killer 2</p>
+                <h2>Random Build Showcase</h2>
+                <p>Random builds showcased by PowerCraft08</p>
+                <a href="https://youtu.be/jfzXbIUa63c" target="_blank">Watch videos &rarr;</a>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <!-- TUTORIAL -->
+      <section id="tutorial" class="project-section">
+        <h2 class="heading">Tutorial</h2>
+        <p class="subtitle tablet-desktop">Guides and tutorials for viewers who want to create their own builds.</p>
+        
+        <!-- VIDEO CARDS -->
+        <div class="grid">
+          <article class="card">
+            <figure>
+              <img src="img/PlaneCrazy_B-17.png" alt="B-17 plane" />
+              <figcaption class="card-text">
+                <p class="category">Plane Crazy</p>
+                <h2>B-17 Tutorial</h2>
+                <p>Tiny B-17 plane tutorial in Plane Crazy</p>
+                <a href="https://www.youtube.com/" target="_blank">Watch videos &rarr;</a>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="img/PlaneCrazy_Blimp.png" alt="Blimp in Plane Crazy" />
+              <figcaption class="card-text">
+                <p class="category">Plane Crazy</p>
+                <h2>Blimp Tutorial</h2>
+                <p>A mini blimp tutorial in Plane Crazy</p>
+                <a href="https://youtu.be/ok7h_Eb8MSI" target="_blank">Watch videos &rarr;</a>
+              </figcaption>
+            </figure>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="img/PlaneCrazy_F-35.png" alt="F-35 mini jet" />
+              <figcaption class="card-text">
+                <p class="category">Plane Crazy</p>
+                <h2>F-35 Tutorial</h2>
+                <p>A mini jet plane created and tutored by PowerCraft08</p>
+                <a href="https://youtu.be/C5EeupUH6sU" target="_blank">Watch videos &rarr;</a>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </section>
+    </main>
+
     <!-- FOOTER -->
     <footer>
       <p class="footer-brand">POWERCRAFT<span>08</span></p>
@@ -39,9 +168,9 @@
       </ul>
       <ul class="social">
         <li><a href="https://discord.com/" target="_blank"><img src="img/icons/discord.png" alt="Discord" /></a></li>
-        <li><a href="https://www.tiktok.com/" target="_blank"><img src="img/icons/tiktok.png" alt="TikTok" /></a></li>
-        <li><a href="https://www.roblox.com/" target="_blank"><img src="img/icons/roblox.png" alt="Roblox" /></a></li>
-        <li><a href="https://www.youtube.com/" target="_blank"><img src="img/icons/youtube.png" alt="YouTube" /></a></li>
+        <li><a href="https://www.tiktok.com/@powercraft08?is_from_webapp=1&sender_device=pc" target="_blank"><img src="img/icons/tiktok.png" alt="TikTok" /></a></li>
+        <li><a href="https://www.roblox.com/share?code=554e59c75305804a8b05676fc2b749d5&type=Profile&source=ProfileShare&stamp=1791350531219" target="_blank"><img src="img/icons/roblox.png" alt="Roblox" /></a></li>
+        <li><a href="https://www.youtube.com/@powercraft0811" target="_blank"><img src="img/icons/youtube.png" alt="YouTube" /></a></li>
       </ul>
       <p class="copy">&copy; 2026 PowerCraft08. All Rights Reserved.</p>
     </footer>
