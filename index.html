@@ -24,6 +24,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-chrome-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
 </head>
+
 <body>
   <div id="container">
     <div id="top-bar">
@@ -41,15 +42,15 @@
       <!-- NAVIGATION -->
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="current" aria-current="page">Home</a></li>
           <li><a href="videos.html">Videos</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" class="current">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <div id="container">
+
     <main class="no-padding">
       <!-- TITLE/DESCRIPTION -->
       <section id="hero">
@@ -67,43 +68,57 @@
         </div>
       </section>
 
+      <!-- BUILT FROM IDEAS -->
       <section class="section">
         <p class="small-title">WHAT IS POWERCRAFT08?</p>
         <h2 class="heading">Built from ideas</h2>
-
-        <div class="tw-columns">
+        
+        <div class="two-columns">
           <div class="text">
             <p>PowerCraft08 is a gaming and creative content channel focused on building, experimenting, and creating different projects.</p>
             <p>Some builds start from my own ideas, while others come from viewers who request something they want to see.</p>
-            <p class="tablet-desktop">This website brings the channel's projects and videos together in one place so they are eadier to explore.</p>
+            <p class="tablet-desktop">This website brings the channel's projects and videos together in one place so they are easier to explore.</p>
           </div>
-
+          
           <div class="idea-box">
             <h3>Your idea.<br><span>My build.</span></h3>
-            <p>Have an idea that you want to see build?</p>
+            <p>Have an idea that you want to see built?</p>
             <a href="contact.html" class="btn">Request a Build</a>
           </div>
         </div>
       </section>
 
       <!-- FEATURED BUILD -->
-       <section id="featured-build" class="section dark">
+      <section id="featured-build" class="section dark">
         <p class="small-title">FROM THE CHANNEL</p>
         <h2 class="heading">Featured build</h2>
-
+        
         <div class="two-columns">
-          <a href="https://youtu.be/QcN_-JhH354?si=DpLtOU8J0xCBhYN2" target="_blank"><img src="img/PlaneCrazy_MobileTips.png" alt="Plane Crazy 5 tips for mobile" class="featured-img"></a>
-
+            <a href="https://youtu.be/QcN_-JhH354?si=DpLtOU8J0xCBhYN2" target="_blank"><img src="img/PlaneCrazy_MobileTips.png" alt="Plane Crazy 5 tips for mobile" class="featured-img" /></a>
+          
           <div class="text">
             <h3 class="sub-heading">From an idea to a real build</h3>
-            <p>PowerCraft08 is about taking an ideaadn turning it into something that can actually be bilt and played with.</p>
-            <p class="tablet-desktop">Explore the projects to see different creatins mafe throughout the channel.</p>
+            <p>PowerCraft08 is about taking an idea and turning it into something that can actually be built and played with.</p>
+            <p class="tablet-desktop">Explore the projects to see different creations made throughout the channel.</p>
             <a href="projects.html" class="btn">View Project</a>
           </div>
         </div>
-       </section>
+      </section>
+
+      <!-- FEATURED VIDEOS -->
+      <section id="featured-videos" class="section dark">
+        <p class="small-title">WATCH SOMETHING NEW  </p>
+        <h2 class="heading">Featured videos</h2>
+        <!-- VIDEO CARDS -->
+        <div class="grid">
+        <article class="card"><figure><img src="img/PlaneCrazy_F-35.png" alt="F-35 mini jet" /><figcaption class="card-text"><p class="category">Plane Crazy</p><h2>F-35 Tutorial</h2><p>A mini jet plane created and tutored by PowerCraft08</p><a href="https://youtu.be/C5EeupUH6sU" target="_blank">Watch videos &rarr;</a></figcaption></figure></article>
+        <article class="card"><figure><img src="img/Mechanica_Police.png" alt="Police car in Mechanica" /><figcaption class="card-text"><p class="category">Mechanica</p><h2>Police Car Showcase</h2><p>A police car built and showcased by PowerCraft08</p><a href="https://youtu.be/-fN7Lc4sS6I" target="_blank">Watch videos &rarr;</a></figcaption></figure></article>
+        <article class="card tablet-desktop"><figure><img src="img/GinuisKiller2_random.png" alt="Genius Killer 2 builds" /><figcaption class="card-text"><p class="category">Genius Killer 2</p><h2>Random Build</h2><p>Random builds showcased by PowerCraft08</p><a href="https://youtu.be/jfzXbIUa63c" target="_blank">Watch videos &rarr;</a></figcaption></figure></article>
+        </div>
+        <p class="view-more"><a href="videos.html" class="btn2">View All Videos</a></p>
+      </section>
     </main>
-  </div>
+
     <!-- FOOTER -->
     <footer>
       <p class="footer-brand">POWERCRAFT<span>08</span></p>

@@ -6,7 +6,7 @@
         Section: WD-202
         Activity: PowerCraft08 Website
   -->
-  <title>Home | PowerCraft08</title>
+  <title>Contact | PowerCraft08</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
@@ -24,6 +24,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-chrome-192.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png" />
 </head>
+
 <body>
   <div id="container">
     <div id="top-bar">
@@ -51,9 +52,56 @@
     </div>
 
     <main>
-      
+      <!-- TITLE/DESCRIPTION -->
+      <section class="intro">
+        <p class="small-title">SUBMIT YOUR IDEAS</p>
+        <h1>Request a Build</h1>
+        <p class="tagline">“IF YOU CAN DREAM IT, WE CAN CRAFT IT.”</p>
+        <p class="intro-text wide">Have an idea for a vehicle, machine, or something you want? Fill out the form below to submit your build request.</p>
+      </section>
+
+      <!-- FORM -->
+      <form id="form">
+        <fieldset>
+          <legend>Creator Identity</legend>
+          <label for="name">Your Name / Username:</label>
+          <input type="text" id="name" placeholder="Enter your name" required />
+          
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" placeholder="Enter your email" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Blue Print Idea</legend>
+          <label for="game">Target Game:</label>
+          <input type="text" id="game" placeholder="Roblox Plane Crazy" />
+          
+          <label for="idea">Build Idea Title:</label>
+          <input type="text" id="idea" placeholder="e.g., Supersonic Jet, 3x3 Door, Hovercraft" required />
+          
+          <label for="details">Tell Me More (Build Details):</label>
+          <textarea name="details" id="details" rows="4" placeholder="Describe how you want the build to work, features to include, or specific mechanics..."></textarea>
+          
+          <div class="form-buttons">
+            <button type="reset" class="btn2">Reset Form</button>
+            <button type="submit" class="btn">Send Request</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- CONTACT INFO -->
+      <section id="contact-info">
+        <h2 class="heading">Contact Info</h2>
+        <ul>
+          <li>Join Server<a href="https://discord.com/" target="_blank"><span>Discord</span></a></li>
+          <li>Watch Short Videos<a href="https://www.tiktok.com/@powercraft08?is_from_webapp=1&sender_device=pc" target="_blank"><span>TikTok</span></a></li>
+          <li>Watch Videos<a href="https://www.youtube.com/@powercraft0811" target="_blank"><span>YouTube</span></a></li>
+          <li>Add Creator<a href="https://www.roblox.com/share?code=554e59c75305804a8b05676fc2b749d5&type=Profile&source=ProfileShare&stamp=1791350531219" target="_blank"><span>Roblox</span></a></li>
+          <li class="call">Call Creator<a href="tel:09084956759"><span>09084956759</span></a></li>
+        </ul>
+      </section>
     </main>
-    
+
     <!-- FOOTER -->
     <footer>
       <p class="footer-brand">POWERCRAFT<span>08</span></p>
