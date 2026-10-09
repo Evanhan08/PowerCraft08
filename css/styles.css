@@ -6,7 +6,7 @@
 */
 
 /* CSS reset */
-body, header, nav, main, footer, h1, h2, h3, p, div, img, ul, li, section, article, button, figure, figcaption{
+body, header, nav, main, footer, h1, h2, h3, p, div, img, ul, li, section, article, button, figure, figcaption, video{
     margin: 0;
     padding: 0;
     border: 0;
@@ -40,25 +40,28 @@ body{
 }
 
 /* IMAGES */
-img{
+img, video{
     width: 100%;
     display: block;
+}
+
+video{
+    aspect-ratio: 16 / 9;
+    background-color: #06080c53;
 }
 
 span{
     color: #62B8FF;
 }
 
-/* SHARED STYLES: all the Bebas Neue texts and all the white texts */
-.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .card-text a, .btn, .btn2, .filter-btn,
-.story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
+/* SHARED STYLES */
+.logo-link, nav li a, h1, .heading, .small-heading, .sub-heading, .idea-box h3, .card h2, .card-text a, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1;
 }
 
-.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .btn, .btn2, .filter-btn,
-.story-logo figcaption, th, #form label, .footer-brand{
+.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form label, .footer-brand{
     color: #fff;
 }
 
@@ -66,8 +69,8 @@ span{
 #top-bar{
     position: sticky;
     top: 0;
+    z-index: 100;
     background-color: rgba(6, 8, 12, 0.45);
-    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-bottom: 3px solid #62B8FF;
 }
@@ -97,7 +100,6 @@ header{
 /* Hamburger button */
 #menu-btn{
     background: none;
-    cursor: pointer;
     padding: 6px;
 }
 
@@ -109,13 +111,17 @@ header{
     background-color: #62B8FF;
 }
 
-/* NAVIGATION LINKS (hidden in mobile, the hamburger button shows them) */
+/* NAVIGATION LINKS (hidden in mobile, the hamburger shows them) */
 nav{
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.4s, visibility 0.4s;
 }
 
-nav.open{
-    display: block;
+.open{
+    max-height: 300px;
+    visibility: visible;
 }
 
 nav ul{
@@ -127,11 +133,9 @@ nav li a{
     display: block;
     padding: 0.6em 1em;
     font-size: 1.2em;
-    transition: color 0.2s;
 }
 
-nav li a:hover,
-nav li a.current{
+.current{
     color: #62B8FF;
 }
 
@@ -140,11 +144,11 @@ main{
     padding: 28px 4% 60px;
 }
 
-main.no-padding{
+.no-padding{
     padding: 0;
 }
 
-/* Show mobile class, hide tablet-desktop class */
+/* Show mobile, hide tablet-desktop class */
 .mobile{
     display: block;
 }
@@ -159,10 +163,9 @@ main.no-padding{
     margin-bottom: 36px;
 }
 
-.small-title,
-.small-title-mobile{
+.small-title, .small-title-mobile{
     color: #62B8FF;
-    font-weight: 650;
+    font-weight: bold;
 }
 
 .small-title{
@@ -188,11 +191,11 @@ h1{
     margin: 10px auto 18px;
 }
 
-.intro-text.wide{
+.wide{
     max-width: 1000px;
 }
 
-/* Filter buttons (videos and projects) */
+/* Filter buttons, for videos and projects */
 .filter-buttons{
     display: flex;
     flex-wrap: wrap;
@@ -201,8 +204,7 @@ h1{
     margin-top: 30px;
 }
 
-/* in mobile the buttons in the projects page fill the row */
-.project-buttons .filter-btn{
+.filter-buttons a{
     flex: 1;
 }
 
@@ -210,16 +212,16 @@ h1{
 .heading{
     font-size: 3.7em;
     margin: 0 0 25px;
+    text-shadow: 210px 20px 15px #62B8FF;
 }
 
-.heading.small{
-    font-size: 1.7em;
+.small-heading{
     color: #62B8FF;
+    font-size: 1.7em;
     margin-bottom: 20px;
 }
 
-.sub-heading,
-.idea-box h3{
+.sub-heading, .idea-box h3{
     font-size: 2.4em;
 }
 
@@ -232,18 +234,12 @@ h1{
     margin-bottom: 16px;
 }
 
-.subtitle{
-    margin: -15px 0 24px;
-}
-
 .center{
     text-align: center;
 }
 
-/* BUTTONS (all the buttons in all the pages have the same size) */
-.btn,
-.btn2,
-.filter-btn{
+/* BUTTONS */
+.btn, .btn2, .filter-btn{
     display: inline-block;
     font-size: 1.2em;
     padding: 14px 16px 11px;
@@ -257,29 +253,52 @@ h1{
     border: 1px solid #fff;
 }
 
-.btn2,
-.filter-btn{
+.btn2, .filter-btn{
     background: transparent;
     border: 1px solid #62B8FF;
 }
 
-.btn:hover,
-.btn2:hover,
-.filter-btn:hover,
-.filter-btn.active{
+.active{
     background-color: #62B8FF;
-    color: #06080C;
+    color: #101A29;
 }
 
-/* HOME PAGE: hero (in mobile only the title is on top of the image) */
+/* HOME PAGE, the title is in the hero */
 .hero-title{
-    background: url("../img/hero.jpg") center / cover;
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
     padding: 30px 4% 28px;
+}
+
+/* ANIMATION EFFECT */
+@keyframes slide-in{
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#hero .small-title, #hero .small-title-mobile, #hero h1, #hero .intro-text, .hero-buttons{
+    animation-name: slide-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+}
+
+#hero .small-title, #hero .small-title-mobile{
+    animation-duration: 0.8s;
 }
 
 #hero h1{
     font-size: 2.3em;
     margin-bottom: 0;
+    text-shadow: 2px 2px 8px rgba(6, 8, 12, 0.8);
+    animation-duration: 1.2s;
+    animation-delay: 0.2s;
 }
 
 #hero .intro-text{
@@ -288,7 +307,8 @@ h1{
     padding: 0 4%;
     font-size: 1.1em;
     line-height: 1.4;
-    color: #d4deec;
+    animation-duration: 1.5s;
+    animation-delay: 0.4s;
 }
 
 .hero-buttons{
@@ -296,15 +316,18 @@ h1{
     flex-direction: column;
     grid-gap: 16px;
     padding: 14px 4% 34px;
+    animation-duration: 1.8s;
+    animation-delay: 0.6s;
 }
 
-/* HOME PAGE: sections */
+
+/* HOME PAGE, sections */
 .section{
     padding: 70px 4%;
 }
 
-.section.dark{
-    background-color: rgba(6, 8, 12, 0.45);
+.dark{
+    background-color: rgba(6, 8, 12, 0.45)
 }
 
 .two-columns{
@@ -320,9 +343,12 @@ h1{
     padding: 28px;
 }
 
-.idea-box h3,
-.idea-box p{
+.idea-box h3, .idea-box p{
     margin-bottom: 20px;
+}
+
+.idea-box h3{
+    text-shadow: 100px 0 0 #000;
 }
 
 .featured-img{
@@ -335,7 +361,7 @@ h1{
     margin-top: 36px;
 }
 
-/* VIDEO CARDS (videos, projects and home) */
+/* VIDEO CARDS, videos, projects and home */
 .grid{
     display: grid;
     grid-template-columns: 1fr;
@@ -351,11 +377,6 @@ h1{
     overflow: hidden;
 }
 
-.card img{
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
 .card-text{
     padding: 25px 21px 32px;
 }
@@ -363,6 +384,7 @@ h1{
 .category{
     color: #62B8FF;
     font-size: 0.75em;
+    font-weight: bold;
     margin-bottom: 6px;
 }
 
@@ -371,7 +393,7 @@ h1{
     margin-bottom: 10px;
 }
 
-.card-text .description{
+.description{
     line-height: 1.35;
     margin-bottom: 26px;
 }
@@ -381,14 +403,14 @@ h1{
     font-size: 1.15em;
 }
 
-.card-text a:hover{
-    color: #fff;
-}
-
 /* PROJECTS PAGE */
 .project-section{
     margin-top: 70px;
     scroll-margin-top: 110px;
+}
+
+.subtitle{
+    margin-bottom: 24px;
 }
 
 /* ABOUT PAGE: story (the logo and button are hidden in mobile) */
@@ -401,7 +423,6 @@ h1{
 .story-logo img{
     width: 340px;
     height: 340px;
-    object-fit: cover;
     border: 1px solid #62B8FF;
     border-radius: 50%;
     margin: 0 auto 10px;
@@ -456,25 +477,23 @@ h1{
 #form label{
     display: block;
     font-size: 0.95em;
-    font-weight: 600;
+    font-weight: bold;
     margin: 18px 0 8px;
 }
 
-#form input,
-#form textarea{
+#form input, #form select, #form textarea{
     width: 100%;
     background-color: #101A29;
     border: 1px solid #62B8FF;
     border-radius: 8px;
     color: #94A3B8;
-    font-family: inherit;
+    font-family: "Roboto", sans-serif;
     font-size: 0.95em;
     padding: 14px 16px;
 }
 
 #form textarea{
-    min-height: 110px;
-    resize: vertical;
+    height: 110px;
 }
 
 .form-buttons{
@@ -511,7 +530,7 @@ h1{
     font-size: 1.6em;
 }
 
-#contact-info li.call{
+.call{
     order: -1;
     background-color: #192B3E;
     border: 1px solid #62B8FF;
@@ -550,10 +569,6 @@ footer ul{
     padding: 0 12px;
 }
 
-.footer-links li a:hover{
-    color: #62B8FF;
-}
-
 .social{
     grid-gap: 22px;
     margin: 22px 0;
@@ -584,9 +599,10 @@ footer ul{
         display: none;
     }
 
-    nav,
-    nav.open{
-        display: block;
+    nav{
+        max-height: none;
+        overflow: visible;
+        visibility: visible;
         padding-bottom: 10px;
     }
 
@@ -609,8 +625,13 @@ footer ul{
     }
 
     /* Tablet: the buttons in the projects page are not stretched anymore */
-    .project-buttons .filter-btn{
+    .filter-buttons a{
         flex: none;
+    }
+
+    /* Tablet: project titles are closer to the description */
+    .project-section .heading{
+        margin-bottom: 10px;
     }
 
     /* Tablet: home page */
@@ -620,25 +641,32 @@ footer ul{
 
     #hero h1{
         font-size: 5em;
-        margin-bottom: 0;
     }
 
     .hero-buttons{
         flex-direction: row;
     }
 
-    /* Tablet: video cards */
+    /* Tablet: video cards (the view all button spans 2 columns) */
     .grid{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         max-width: none;
+    }
+
+    .view-more{
+        grid-column: 1 / span 2;
     }
 
     /* Tablet: about page */
     .story-box{
-        background: linear-gradient(to bottom right, #396994, #101A29);
+        background: linear-gradient(to bottom right, rgba(98, 184, 255, 0.5), #101A29);
         border: 1px solid #62B8FF;
         border-radius: 8px;
         padding: 40px;
+        box-shadow: inset -12px -20px 100px 32px #06080c,
+                    -20px -6px 50px 0px rgba(6, 8, 12, 0.8),
+                    inset 20px 20px 88px -48px rgb(98 184 255),
+                    39px 25px 75px 0 rgb(98 184 255 / 7%);
     }
 
     .story-logo{
@@ -647,13 +675,15 @@ footer ul{
 
     .story-box .btn{
         display: block;
-        width: fit-content;
+        width: 200px;
         margin: 12px 0 0 auto;
     }
 
+    /* Tablet: table (the border on the right is made by the cells) */
     table{
         width: 100%;
         border: 1px solid #62B8FF;
+        border-right: 0;
         border-radius: 8px;
         border-collapse: separate;
         border-spacing: 0;
@@ -661,37 +691,27 @@ footer ul{
         table-layout: fixed;
     }
 
-    tr{
-        background-color: #192B3E;
-    }
-
-    tbody tr:nth-child(odd){
+    .dark-row{
         background-color: #101A29;
     }
 
+    .light-row{
+        background-color: #192B3E;
+    }
+
     th{
-        background-color: #62b8ff9b;
+        background-color: rgba(98, 184, 255, 0.6);
         font-size: 1.4em;
         padding: 20px 16px;
     }
 
-    thead tr{
-        text-align: center;
-    }
-
-    th,
-    td{
-        border-left: 1px solid #62B8FF;
-    }
-
     td{
         padding: 18px 24px;
-        border-top: 1px solid #62B8FF;
+        border-top: 1px solid rgba(98, 184, 255, 0.6);
     }
 
-    th:first-child,
-    td:first-child{
-        border-left: 0;
+    th, td{
+        border-right: 1px solid rgba(98, 184, 255, 0.6);
     }
 
     /* Tablet: contact page */
@@ -699,12 +719,22 @@ footer ul{
         flex-direction: row;
     }
 
-    .form-buttons .btn,
-    .form-buttons .btn2{
+    .form-buttons .btn, .form-buttons .btn2{
         flex: 1;
     }
 
-    #contact-info li.call{
+    #contact-info{
+        max-width: 800px;
+        padding: 30px 20px 0;
+        border: 1px solid #62B8FF;
+        border-radius: 10px;
+        box-shadow: inset -12px -20px 100px 32px #06080c,
+                    -20px -6px 50px 0px rgba(6, 8, 12, 0.8),
+                    inset 20px 20px 88px -48px rgb(98 184 255),
+                    39px 25px 75px 0 rgb(98 184 255 / 7%);
+    }
+
+    .call{
         order: 0;
         background: none;
         border: 0;
@@ -714,10 +744,9 @@ footer ul{
 
 
 /* =================================================================== */
-/* MEDIA QUERY FOR DESKTOP VIEWPORT (only what changes from the tablet) */
+/* MEDIA QUERY FOR DESKTOP VIEWPORT */
 @media screen and (min-width: 1015px) {
 
-    /* Desktop: logo on the left, nav on the right inside the same bar */
     header{
         height: 70px;
         padding: 0 0 0 11.2%;
@@ -734,8 +763,7 @@ footer ul{
         height: 44px;
     }
 
-    nav,
-    nav.open{
+    nav{
         position: absolute;
         top: 28px;
         right: 10.6%;
@@ -756,9 +784,10 @@ footer ul{
         padding: 70px 11.2% 95px;
     }
 
-    /* Desktop: home page (the image is behind the whole hero) */
     #hero{
-        background: url("../img/hero.jpg") center / cover;
+        background-image: url("../img/hero.jpg");
+        background-size: cover;
+        background-position: center;
         padding: 90px 11.2%;
         min-height: 528px;
     }
@@ -772,10 +801,10 @@ footer ul{
         max-width: 700px;
     }
 
-    #hero .intro-text,
-    .hero-buttons{
+    #hero .intro-text, .hero-buttons{
         padding: 0;
     }
+
 
     .section{
         padding: 140px 11.2%;
@@ -786,9 +815,18 @@ footer ul{
         grid-gap: 70px;
     }
 
-    /* Desktop: video cards */
+    /* Desktop: video cards (the view all button spans 3 columns) */
     .grid{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .view-more{
+        grid-column: 1 / span 3;
+    }
+
+    .card{
+        opacity: 0.85;
+        transition: transform 0.3s, opacity 0.3s;
     }
 
     /* Desktop: about page */
@@ -797,6 +835,30 @@ footer ul{
         grid-template-columns: 1fr 1.25fr;
         grid-gap: 40px;
         align-items: center;
+    }
+
+    /* Desktop: hover effects (use a mouse to test them) */
+    nav li a:hover{
+        color: #62B8FF;
+    }
+
+    .btn:hover, .btn2:hover, .filter-btn:hover{
+        background-color: #62B8FF;
+        color: #06080C;
+    }
+
+    .card:hover{
+        transform: scale(1.04);
+        opacity: 1;
+        box-shadow: 0 0 14px rgba(98, 184, 255, 0.6);
+    }
+
+    .card-text a:hover{
+        color: #fff;
+    }
+
+    .footer-links li a:hover{
+        color: #62B8FF;
     }
 }
 
@@ -809,20 +871,18 @@ footer ul{
         color: #222;
     }
 
-    nav, #menu-btn, #logo, .btn, .btn2, .filter-buttons, .grid, .view-more, .social, .footer-links, .quote,
+    nav, #menu-btn, #logo, video, .btn, .btn2, .filter-buttons, .grid, .view-more, .social, .footer-links, .quote,
     .featured-img, .hero-buttons, .story-logo img, .tagline, .mobile{
-        display: none !important;
+        display: none;
     }
 
     #top-bar{
         position: static;
         background: none;
         border: 0;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
     }
 
-    main, .section, .section.dark, footer{
+    main, .section, .dark, footer{
         padding: 12px 0;
         background: none;
         border: 0;
@@ -837,7 +897,7 @@ footer ul{
     }
 
     #hero{
-        border: 1px solid transparent;
+        border: 1px solid #000;
         padding: 16px;
     }
 
@@ -848,12 +908,11 @@ footer ul{
 
     #hero .intro-text{
         padding: 0;
-        color: #222;
     }
 
     .idea-box{
         background: none;
-        border: 1px solid transparent;
+        border: 1px solid #000;
     }
 
     table{
@@ -862,11 +921,12 @@ footer ul{
     }
 
     th, td{
-        border: 1px solid transparent;
+        border: 1px solid #000;
         padding: 8px;
     }
 
     th{
         background-color: #62B8FF;
     }
+
 }
