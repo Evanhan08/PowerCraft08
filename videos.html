@@ -6,10 +6,11 @@
         Section: WD-202
         Activity: PowerCraft08 Website
   -->
-  <title>Videos | PowerCraft08</title>
+  <title>Videos: PowerCraft08</title>
+  <meta name="description" content="Watch PowerCraft08 videos: Plane Crazy, Mechanica and Minecraft build tutorials and showcases in one place.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles.min.css" type="text/css" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,20 +60,20 @@
         <p class="intro-text">Explore gaming videos, building, experimenting, and creative projects.</p>
 
         <div class="filter-buttons">
-          <button class="filter-btn active">All</button>
-          <button class="filter-btn">Plane Crazy</button>
-          <button class="filter-btn">Mechanica</button>
-          <button class="filter-btn">Minecraft</button>
-          <button class="filter-btn">Other</button>
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="plane-crazy">Plane Crazy</button>
+          <button class="filter-btn" data-filter="mechanica">Mechanica</button>
+          <button class="filter-btn" data-filter="minecraft">Minecraft</button>
+          <button class="filter-btn" data-filter="other">Other</button>
         </div>
       </section>
 
       <section class="grid">
-        <article class="card">
+        <article class="card" data-category="plane-crazy">
           <figure>
             <img src="img/PlaneCrazy_F-35.png" alt="F-35 mini jet in Plane Crazy" />
             <figcaption class="card-text">
-              <p class="category">Plane Crazy</p>
+              <p class="category">PLANE CRAZY</p>
               <h2>F-35 Tutorial</h2>
               <p class="description">A mini jet plane created and tutored by PowerCraft08</p>
               <a href="https://youtu.be/C5EeupUH6sU" target="_blank" >Watch videos &rarr;</a>
@@ -80,11 +81,11 @@
           </figure>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="mechanica">
           <figure>
             <img src="img/Mechanica_Police.png" alt="Police car in Mechanica" />
             <figcaption class="card-text">
-              <p class="category">Mechanica</p>
+              <p class="category">MECHANICA</p>
               <h2>Police Car Showcase</h2>
               <p class="description">A police car built and showcased by PowerCraft08</p>
               <a href="https://youtu.be/-fN7Lc4sS6I" target="_blank" >Watch videos &rarr;</a>
@@ -92,11 +93,11 @@
           </figure>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="other">
           <figure>
             <img src="img/GinuisKiller2_random.png" alt="Genius Killer 2 random builds" />
             <figcaption class="card-text">
-              <p class="category">Genius Killer 2</p>
+              <p class="category">GENIUS KILLER 2</p>
               <h2>Random Build</h2>
               <p class="description">Random builds showcased by PowerCraft08</p>
               <a href="https://youtu.be/jfzXbIUa63c" target="_blank" >Watch videos &rarr;</a>
@@ -104,11 +105,11 @@
           </figure>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="plane-crazy">
           <figure>
             <img src="img/PlaneCrazy_Blimp.png" alt="Blimp in Plane Crazy" />
             <figcaption class="card-text">
-              <p class="category">Plane Crazy</p>
+              <p class="category">PLANE CRAZY</p>
               <h2>Blimp Tutorial</h2>
               <p class="description">A mini blimp tutorial in Plane Crazy</p>
               <a href="https://youtu.be/ok7h_Eb8MSI" target="_blank" >Watch videos &rarr;</a>
@@ -116,11 +117,11 @@
           </figure>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="mechanica">
           <figure>
             <img src="img/Mechanica_BlinkingLights.png" alt="Blinking lights using logic gates" />
             <figcaption class="card-text">
-              <p class="category">Mechanica</p>
+              <p class="category">MECHANICA</p>
               <h2>Blinking Lights</h2>
               <p class="description">A tutorial on how blinking light works using LOGIC GATES</p>
               <a href="https://youtu.be/jtjymV6GU4A" target="_blank" >Watch videos &rarr;</a>
@@ -128,11 +129,11 @@
           </figure>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="minecraft">
           <figure>
             <img src="img/Minecraft_MovingCar.png" alt="Moving car in Minecraft" />
             <figcaption class="card-text">
-              <p class="category">Minecraft</p>
+              <p class="category">MINECRAFT</p>
               <h2>Moving Car Tutorial</h2>
               <p class="description">Tutorial on how to build a moving car in Minecraft</p>
               <a href="https://youtu.be/MlBhC425txk" target="_blank" >Watch videos &rarr;</a>
@@ -142,10 +143,10 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
       <p class="footer-brand">POWERCRAFT<span>08</span></p>
-      <p class="quote">&ldquo;If you can dream it, we can craft it.&rdquo;</p>
+      <p class="quote">"If you can dream it, we can craft it."</p>
       <ul class="footer-links">
         <li><a href="index.html">home</a></li>
         <li><a href="videos.html">Videos</a></li>
@@ -162,7 +163,6 @@
       <p class="copy">&copy; 2026 PowerCraft08. All Rights Reserved.</p>
     </footer>
   </div>
-
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

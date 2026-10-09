@@ -6,7 +6,7 @@
         Section: WD-202
         Activity: PowerCraft08 Website
   -->
-  <title>Contact | PowerCraft08</title>
+  <title>Contact: PowerCraft08</title>
   <meta name="description" content="Send a build request to PowerCraft08 and find the Discord, TikTok, YouTube, Roblox and phone contact details.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +43,7 @@
       <!-- NAVIGATION -->
       <nav>
         <ul>
-          <li class="first-link"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="videos.html">Videos</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
@@ -57,7 +57,7 @@
       <section class="intro">
         <p class="small-title">SUBMIT YOUR IDEAS</p>
         <h1>Request a Build</h1>
-        <p class="tagline">“IF YOU CAN DREAM IT, WE CAN CRAFT IT.”</p>
+        <p class="tagline">"IF YOU CAN DREAM IT, WE CAN CRAFT IT."</p>
         <p class="intro-text wide">Have an idea for a vehicle, machine, or something you want? Fill out the form below to submit your build request.</p>
       </section>
 
@@ -75,7 +75,15 @@
         <fieldset>
           <legend>Blue Print Idea</legend>
           <label for="game">Target Game:</label>
-          <input type="text" id="game" placeholder="Roblox Plane Crazy" />
+          <select id="game" name="game">
+            <option value="plane-crazy">Plane Crazy</option>
+            <option value="mechanica">Mechanica</option>
+            <option value="minecraft">Minecraft</option>
+            <option value="roblox">Roblox</option>
+            <option value="evertech-sandbox">Evertech Sandbox</option>
+            <option value="genius-mechanic">Genius Mechanic</option>
+            <option value="genius-killer">Genius Killer</option>
+          </select>
           
           <label for="idea">Build Idea Title:</label>
           <input type="text" id="idea" placeholder="e.g., Supersonic Jet, 3x3 Door, Hovercraft" required />
@@ -106,7 +114,7 @@
     <!-- FOOTER -->
     <footer>
       <p class="footer-brand">POWERCRAFT<span>08</span></p>
-      <p class="quote">&ldquo;If you can dream it, we can craft it.&rdquo;</p>
+      <p class="quote">"If you can dream it, we can craft it."</p>
       <ul class="footer-links">
         <li><a href="index.html">home</a></li>
         <li><a href="videos.html">Videos</a></li>
