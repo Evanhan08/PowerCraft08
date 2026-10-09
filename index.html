@@ -7,9 +7,10 @@
         Activity: PowerCraft08 Website
   -->
   <title>Home | PowerCraft08</title>
+  <meta name="description" content="PowerCraft08 is a gaming and creative YouTube channel with Roblox Plane Crazy, Minecraft and Mechanica builds, tutorials and featured videos.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles.min.css" type="text/css" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +43,7 @@
       <!-- NAVIGATION -->
       <nav>
         <ul>
-          <li><a href="index.html" class="current" aria-current="page">Home</a></li>
+          <li class="first-link"><a href="index.html" class="current" aria-current="page">Home</a></li>
           <li><a href="videos.html">Videos</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
@@ -94,7 +95,14 @@
         <h2 class="heading">Featured build</h2>
         
         <div class="two-columns">
-            <a href="https://youtu.be/QcN_-JhH354?si=DpLtOU8J0xCBhYN2" target="_blank"><img src="img/PlaneCrazy_MobileTips.png" alt="Plane Crazy 5 tips for mobile" class="featured-img" /></a>
+            <video class="featured-img" controls poster="img/PlaneCrazy_MobileTips.png">
+            <source src="media/featured-build.mp4" type="video/mp4">
+            <source src="media/featured-build.webm" type="video/webm">
+            <track src="media/captions.vtt" kind="captions" srclang="en" label="English">
+            <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English descriptions">
+            <p>Your browser does not support the video element.</p>
+            <img src="img/PlaneCrazy_MobileTips.png" alt="Plane Crazy 5 tips for mobile">
+          </video>
           
           <div class="text">
             <h3 class="sub-heading">From an idea to a real build</h3>
@@ -146,8 +154,8 @@
             </figcaption>
           </figure>
         </article>
-        </div>
         <p class="view-more"><a href="videos.html" class="btn2">View All Videos</a></p>
+        </div>
       </section>
     </main>
 
@@ -171,6 +179,6 @@
       <p class="copy">&copy; 2026 PowerCraft08. All Rights Reserved.</p>
     </footer>
   </div>
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
