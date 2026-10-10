@@ -872,12 +872,16 @@ footer ul{
 @media print {
     body{
         background-color: #fff;
-        color: #222;
+        color: #94A3B8;
     }
 
     nav, #menu-btn, #logo, video, .btn, .btn2, .filter-buttons, .grid, .view-more, .social, .footer-links, .quote,
-    .featured-img, .hero-buttons, .story-logo img, .tagline, .mobile{
+    .footer-brand, .featured-img, .hero-buttons, .story-logo img, .tagline, .mobile{
         display: none;
+    }
+
+    .tablet-desktop{
+        display: block;
     }
 
     #top-bar{
@@ -886,20 +890,31 @@ footer ul{
         border: 0;
     }
 
+    header{
+        padding: 0 0 8px;
+    }
+
     main, .section, .dark, footer{
-        padding: 12px 0;
+        padding: 14px 0;
         background: none;
         border: 0;
     }
 
-    .tablet-desktop{
-        display: block;
-    }
-
-    .logo-link, h1, h2, h3, .heading, .sub-heading, .footer-brand, .story-logo figcaption{
+    /* black headings, the blue words come from the span */
+    .logo-link, h1, h2, h3, .heading, .idea-box h3, .story-logo figcaption{
         color: #000;
+        text-shadow: none;
     }
 
+    .heading{
+        font-size: 3em;
+    }
+
+    .sub-heading{
+        color: #62B8FF;
+    }
+
+    /* home page */
     #hero{
         border: 1px solid #000;
         padding: 16px;
@@ -910,27 +925,77 @@ footer ul{
         padding: 0;
     }
 
+    #hero h1{
+        font-size: 3em;
+        margin-bottom: 8px;
+        text-shadow: none;
+    }
+
     #hero .intro-text{
+        margin: 8px 0 0;
         padding: 0;
+    }
+
+    .two-columns{
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 24px;
+    }
+
+    #featured-build .two-columns{
+        display: block;
     }
 
     .idea-box{
         background: none;
         border: 1px solid #000;
+        border-radius: 10px;
+    }
+
+    /* about page */
+    .story-logo{
+        display: block;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    .story-logo figcaption{
+        font-size: 1.2em;
+    }
+
+    .small-heading{
+        font-size: 1.2em;
     }
 
     table{
         width: 100%;
-        border-collapse: collapse;
-    }
-
-    th, td{
         border: 1px solid #000;
-        padding: 8px;
+        border-right: 0;
+        border-radius: 10px;
+        border-collapse: separate;
+        border-spacing: 0;
+        overflow: hidden;
+        table-layout: fixed;
     }
 
     th{
         background-color: #62B8FF;
+        text-align: center;
+        font-size: 1em;
+        padding: 14px 8px;
     }
 
+    td{
+        padding: 14px 8px;
+        text-align: center;
+        border-top: 1px solid #000;
+    }
+
+    th, td{
+        border-right: 1px solid #000;
+    }
+
+    /* footer, only the copyright */
+    footer{
+        text-align: left;
+    }
 }
