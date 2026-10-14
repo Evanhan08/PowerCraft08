@@ -55,13 +55,13 @@ span{
 }
 
 /* SHARED STYLES */
-.logo-link, nav li a, h1, .heading, .small-heading, .sub-heading, .idea-box h3, .card h2, .card-text a, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
+.logo-link, nav li a, h1, .heading, .small-heading, .sub-heading, .idea-box h3, .card h2, .card h3 .card-text a, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
     font-family: "Bebas Neue", sans-serif;
     font-weight: normal;
     line-height: 1;
 }
 
-.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form label, .footer-brand{
+.logo-link, nav li a, h1, .heading, .sub-heading, .idea-box h3, .card h2, .card h3, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form label, .footer-brand{
     color: #fff;
 }
 
@@ -388,7 +388,7 @@ h1{
     margin-bottom: 6px;
 }
 
-.card h2{
+.card h2, .card h3{
     font-size: 1.5em;
     margin-bottom: 10px;
 }
