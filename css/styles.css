@@ -55,7 +55,7 @@ span{
 }
 
 /* SHARED STYLES */
-.logo-link, nav li a, h1, .heading, .small-heading, .sub-heading, .idea-box h3, .card h2, .card h3 .card-text a, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
+.logo-link, nav li a, h1, .heading, .small-heading, .sub-heading, .idea-box h3, .card h2, .card h3, .card-text a, .btn, .btn2, .filter-btn, .story-logo figcaption, th, #form legend, #contact-info li a, .footer-brand{
     font-family: "Bebas Neue", sans-serif;
     font-weight: normal;
     line-height: 1;
